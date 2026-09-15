@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/vinay/Downloads/thefit24---the-strength-architect/src/app/about/layout.tsx"],"sourcesContent":["import { Metadata } from 'next';\n\nexport const metadata: Metadata = {\n  title: 'About Us - TheFit24',\n  description: 'Learn about the philosophy and master coaches behind TheFit24.',\n};\n\nexport default function AboutLayout({ children }: { children: React.ReactNode }) {\n  return <>{children}</>;\n}\n"],"names":["metadata","title","description","AboutLayout","children"],"mappings":";;;;;;;;AAEO,MAAMA,WAAqB;IAChCC,OAAO;IACPC,aAAa;AACf;AAEe,SAASC,YAAY,EAAEC,QAAQ,EAAiC;IAC7E,qBAAO;kBAAGA;;;;;;AACZ"}}]
-}

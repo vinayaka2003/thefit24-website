@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/vinay/Downloads/thefit24---the-strength-architect/src/app/trainers/layout.tsx"],"sourcesContent":["import { Metadata } from 'next';\n\nexport const metadata: Metadata = {\n  title: 'Master Coaches - TheFit24',\n  description: 'Train with elite strength and conditioning coaches at TheFit24.',\n};\n\nexport default function TrainersLayout({ children }: { children: React.ReactNode }) {\n  return <>{children}</>;\n}\n"],"names":["metadata","title","description","TrainersLayout","children"],"mappings":";;;;;;;;AAEO,MAAMA,WAAqB;IAChCC,OAAO;IACPC,aAAa;AACf;AAEe,SAASC,eAAe,EAAEC,QAAQ,EAAiC;IAChF,qBAAO;kBAAGA;;;;;;AACZ"}}]
-}

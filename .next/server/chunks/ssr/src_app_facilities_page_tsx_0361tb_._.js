@@ -1,3 +1,0 @@
-module.exports=[91608,a=>{"use strict";var b=a.i(87924);let c=(0,a.i(19721).default)(async()=>{},{loadableGenerated:{modules:[97035]},ssr:!1});a.s(["default",0,function(){return(0,b.jsx)(c,{onOpenConsult:()=>((a="facility-tour")=>{let b=encodeURIComponent("Hi TheFit24, I would like to book a free session.");window.open(`https://wa.me/918055534824?text=${b}`,"_blank","noopener,noreferrer")})("facility-tour")})}])}];
-
-//# sourceMappingURL=src_app_facilities_page_tsx_0361tb_._.js.map

@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/vinay/Downloads/thefit24---the-strength-architect/src/app/facilities/layout.tsx"],"sourcesContent":["import { Metadata } from 'next';\n\nexport const metadata: Metadata = {\n  title: 'Facilities & Equipment - TheFit24',\n  description: 'Explore our 14 power racks, Olympic platforms, and cold plunge contrast recovery.',\n};\n\nexport default function FacilitiesLayout({ children }: { children: React.ReactNode }) {\n  return <>{children}</>;\n}\n"],"names":["metadata","title","description","FacilitiesLayout","children"],"mappings":";;;;;;;;AAEO,MAAMA,WAAqB;IAChCC,OAAO;IACPC,aAAa;AACf;AAEe,SAASC,iBAAiB,EAAEC,QAAQ,EAAiC;IAClF,qBAAO;kBAAGA;;;;;;AACZ"}}]
-}

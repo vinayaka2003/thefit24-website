@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/vinay/Downloads/thefit24---the-strength-architect/src/app/membership/layout.tsx"],"sourcesContent":["import { Metadata } from 'next';\n\nexport const metadata: Metadata = {\n  title: 'Membership Plans - TheFit24',\n  description: 'Select your membership tier and gain access to TheFit24.',\n};\n\nexport default function MembershipLayout({ children }: { children: React.ReactNode }) {\n  return <>{children}</>;\n}\n"],"names":["metadata","title","description","MembershipLayout","children"],"mappings":";;;;;;;;AAEO,MAAMA,WAAqB;IAChCC,OAAO;IACPC,aAAa;AACf;AAEe,SAASC,iBAAiB,EAAEC,QAAQ,EAAiC;IAClF,qBAAO;kBAAGA;;;;;;AACZ"}}]
-}

@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/vinay/Downloads/thefit24---the-strength-architect/src/app/contact/layout.tsx"],"sourcesContent":["import { Metadata } from 'next';\n\nexport const metadata: Metadata = {\n  title: 'Contact & Location - TheFit24',\n  description: 'Find our gym in Yelahanka, Bangalore, or reach out to our concierge.',\n};\n\nexport default function ContactLayout({ children }: { children: React.ReactNode }) {\n  return <>{children}</>;\n}\n"],"names":["metadata","title","description","ContactLayout","children"],"mappings":";;;;;;;;AAEO,MAAMA,WAAqB;IAChCC,OAAO;IACPC,aAAa;AACf;AAEe,SAASC,cAAc,EAAEC,QAAQ,EAAiC;IAC/E,qBAAO;kBAAGA;;;;;;AACZ"}}]
-}

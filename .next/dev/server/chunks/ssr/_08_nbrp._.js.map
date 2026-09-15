@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/vinay/Downloads/thefit24---the-strength-architect/node_modules/next/src/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = (\n  require('../../module.compiled') as typeof import('../../module.compiled')\n).vendored['react-ssr']!.ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":"AAAAA,OAAOC,OAAO,GACZC,QAAQ,4HACRC,QAAQ,CAAC,YAAY,CAAEC,kBAAkB","ignoreList":[0]}},
-    {"offset": {"line": 9, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/vinay/Downloads/thefit24---the-strength-architect/src/app/contact/page.tsx"],"sourcesContent":["\"use client\";\n\nimport dynamic from 'next/dynamic';\n\nconst ContactView = dynamic(() => import('../../components/contact/ContactView').then(mod => mod.ContactView), { ssr: false });\n\nexport default function ContactPage() {\n  return <ContactView />;\n}\n"],"names":["ContactView","ssr","ContactPage"],"mappings":";;;;;AAEA;;AAFA;;;AAIA,MAAMA,cAAc,IAAA,0KAAO;;;;;;IAAsFC,KAAK;;AAEvG,SAASC;IACtB,qBAAO,8OAACF;;;;;AACV"}}]
-}

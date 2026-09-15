@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/vinay/Downloads/thefit24---the-strength-architect/src/components/layout/DynamicClientLayout.tsx"],"sourcesContent":["\"use client\";\nimport dynamic from 'next/dynamic';\n\nexport const DynamicClientLayout = dynamic(() => import('./ClientLayout').then(mod => mod.ClientLayout), { ssr: false });\n"],"names":["DynamicClientLayout","ssr"],"mappings":";;;;AACA;;AADA;;AAGO,MAAMA,sBAAsB,IAAA,0KAAO;;;;;;IAAiEC,KAAK"}}]
-}
