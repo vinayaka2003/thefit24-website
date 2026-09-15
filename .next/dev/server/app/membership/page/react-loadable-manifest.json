@@ -1,0 +1,16 @@
+{
+  "[project]/src/components/layout/ClientLayout.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/layout/ClientLayout.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/src_13809cw._.js",
+      "static/chunks/node_modules_1ivf38o._.js"
+    ]
+  },
+  "[project]/src/components/membership/MembershipView.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/membership/MembershipView.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_1_ojzai._.js",
+      "static/chunks/src_10cq_ps._.js"
+    ]
+  }
+}

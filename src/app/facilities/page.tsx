@@ -1,0 +1,19 @@
+"use client";
+
+import dynamic from 'next/dynamic';
+
+const FacilitiesView = dynamic(() => import('../../components/facilities/FacilitiesView').then(mod => mod.FacilitiesView), { ssr: false });
+
+export default function FacilitiesPage() {
+  const whatsappNumber = '918055534824';
+
+  const handleOpenConsult = (type: string = 'facility-tour') => {
+    let msg = 'Hi TheFit24, I would like to book a free session.';
+    const encoded = encodeURIComponent(msg);
+    window.open(`https://wa.me/${whatsappNumber}?text=${encoded}`, '_blank', 'noopener,noreferrer');
+  };
+
+  return (
+    <FacilitiesView onOpenConsult={() => handleOpenConsult('facility-tour')} />
+  );
+}

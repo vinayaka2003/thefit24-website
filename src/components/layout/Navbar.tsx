@@ -1,7 +1,10 @@
+"use client";
+
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'motion/react';
 import { Menu, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 interface NavbarProps {
   onOpenConsult: (type?: string) => void;
@@ -10,8 +13,8 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({
   onOpenConsult,
 }) => {
-  const location = useLocation();
-  const activePage = location.pathname === '/' ? 'home' : location.pathname.substring(1);
+  const pathname = usePathname();
+  const activePage = pathname === '/' ? 'home' : pathname?.substring(1) || 'home';
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -110,7 +113,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Minimalist Brand Identity */}
           <Link
-            to="/"
+            href="/"
             onClick={handleNavClick}
             className="flex items-center gap-3 text-left group cursor-pointer focus:outline-none select-none"
             aria-label="TheFit24 Home"
@@ -134,7 +137,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               return (
                 <Link
                   key={link.id}
-                  to={link.id === 'home' ? '/' : `/${link.id}`}
+                  href={link.id === 'home' ? '/' : `/${link.id}`}
                   onClick={handleNavClick}
                   data-active={isActive}
                   className={`relative px-3.5 py-2 text-xs font-mono tracking-wider uppercase rounded-lg transition-colors cursor-pointer drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)] ${
@@ -231,7 +234,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 return (
                   <motion.div key={link.id} variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } } }}>
                     <Link
-                      to={link.id === 'home' ? '/' : `/${link.id}`}
+                      href={link.id === 'home' ? '/' : `/${link.id}`}
                       onClick={handleNavClick}
                       className={`w-full flex items-center justify-between px-2 py-3.5 text-lg font-sans tracking-wide transition-all duration-300 cursor-pointer ${
                         isActive

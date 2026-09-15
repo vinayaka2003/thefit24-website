@@ -1,0 +1,3 @@
+module.exports=[6095,a=>{"use strict";var b=a.i(87924);let c=(0,a.i(19721).default)(async()=>{},{loadableGenerated:{modules:[95371]},ssr:!1});a.s(["default",0,function(){let a="918055534824";return(0,b.jsx)(c,{onSelectPlan:b=>{let c=encodeURIComponent(`Hi TheFit24, I am interested in the ${b} membership plan.`);window.open(`https://wa.me/${a}?text=${c}`,"_blank","noopener,noreferrer")},onOpenConsult:()=>((b="membership-signup")=>{let c=encodeURIComponent("Hi TheFit24, I am interested in joining and would like to sign up for a membership.");window.open(`https://wa.me/${a}?text=${c}`,"_blank","noopener,noreferrer")})("membership-signup")})}])}];
+
+//# sourceMappingURL=src_app_membership_page_tsx_0qslfuy._.js.map

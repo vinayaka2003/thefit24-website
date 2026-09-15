@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { gymData } from '../../data/gym';
 import {
   SvglWhatsApp,
@@ -123,7 +123,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsult }) => {
               {navItems.map((item) => (
                 <li key={item.id}>
                   <Link
-                    to={item.id === 'home' ? '/' : `/${item.id}`}
+                    href={item.id === 'home' ? '/' : `/${item.id}`}
                     onClick={() => {
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}

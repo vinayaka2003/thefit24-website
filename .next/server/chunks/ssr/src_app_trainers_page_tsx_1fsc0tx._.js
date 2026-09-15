@@ -1,0 +1,3 @@
+module.exports=[1482,a=>{"use strict";var b=a.i(87924);let c=(0,a.i(19721).default)(async()=>{},{loadableGenerated:{modules:[38774]},ssr:!1});a.s(["default",0,function(){return(0,b.jsx)(c,{onBookTrainer:a=>{let b=encodeURIComponent(`Hi TheFit24, I would like to book a coaching session with ${a.name}.`);window.open(`https://wa.me/918055534824?text=${b}`,"_blank","noopener,noreferrer")}})}])}];
+
+//# sourceMappingURL=src_app_trainers_page_tsx_1fsc0tx._.js.map

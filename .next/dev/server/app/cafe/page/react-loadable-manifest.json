@@ -1,0 +1,16 @@
+{
+  "[project]/src/components/layout/ClientLayout.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/layout/ClientLayout.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/src_13809cw._.js",
+      "static/chunks/node_modules_1ivf38o._.js"
+    ]
+  },
+  "[project]/src/components/cafe/CafeView.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/cafe/CafeView.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_1rhxg_5._.js",
+      "static/chunks/src_components_cafe_193epvg._.js"
+    ]
+  }
+}

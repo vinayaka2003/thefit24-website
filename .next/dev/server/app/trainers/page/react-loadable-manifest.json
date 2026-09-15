@@ -1,0 +1,16 @@
+{
+  "[project]/src/components/layout/ClientLayout.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/layout/ClientLayout.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/src_13809cw._.js",
+      "static/chunks/node_modules_1ivf38o._.js"
+    ]
+  },
+  "[project]/src/components/trainers/TrainersView.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/trainers/TrainersView.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_01rfk3_._.js",
+      "static/chunks/src_07-1v-g._.js"
+    ]
+  }
+}

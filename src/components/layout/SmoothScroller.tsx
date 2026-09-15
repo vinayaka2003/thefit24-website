@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import Lenis from 'lenis';
-import { useLocation } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
 
 export const SmoothScroller = () => {
-  const { pathname } = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const lenis = new Lenis({
