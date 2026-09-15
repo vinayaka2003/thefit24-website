@@ -115,7 +115,7 @@ export const LazyBlurImage: React.FC<LazyBlurImageProps> = ({
           }}
           transition={{
             duration: 0.65,
-            ease: [0.22, 1, 0.36, 1],
+            ease: [0.22, 1, 0.36, 1] as any,
           }}
           className={`w-full h-full transform-gpu ${className}`}
         />

@@ -11,7 +11,7 @@ export const GalleryView: React.FC = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as any } }
   };
 
   // Asymmetrical masonry grid logic
@@ -69,7 +69,7 @@ export const GalleryView: React.FC = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 1, delay: (idx % 3) * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 1, delay: (idx % 3) * 0.1, ease: [0.22, 1, 0.36, 1] as any }}
               className={`group relative overflow-hidden bg-[#0a0a0e] rounded-sm ${getColSpan(idx)}`}
             >
               <LazyBlurImage

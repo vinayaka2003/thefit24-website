@@ -10,7 +10,7 @@ export const CafeView: React.FC = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.22, 1, 0.36, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.22, 1, 0.36, 1] as any } }
   };
 
   return (
@@ -47,7 +47,7 @@ export const CafeView: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as any }}
             className="w-full max-w-5xl"
           >
             <div className="flex items-center gap-6 mb-16 border-b border-white/10 pb-6">
@@ -82,7 +82,7 @@ export const CafeView: React.FC = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as any }}
             >
               <div className="flex items-center gap-6 mb-8 border-b border-white/10 pb-6">
                 <span className="text-6xl sm:text-8xl font-black text-white/5 leading-none">02</span>
@@ -108,7 +108,7 @@ export const CafeView: React.FC = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as any }}
             >
               <div className="flex items-center gap-6 mb-8 border-b border-white/10 pb-6">
                 <span className="text-6xl sm:text-8xl font-black text-white/5 leading-none">03</span>

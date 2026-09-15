@@ -8,7 +8,7 @@ export const ManifestoSection: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as any }}
         className="relative z-10 max-w-4xl mx-auto flex flex-col items-center"
       >
         {/* Subtle Eyebrow */}

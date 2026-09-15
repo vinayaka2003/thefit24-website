@@ -174,18 +174,19 @@ export const Navbar: React.FC<NavbarProps> = ({
               <motion.line 
                 x1="4" y1="6" x2="20" y2="6" 
                 animate={mobileMenuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }} 
-                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }} 
+                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] as any }} 
                 style={{ originX: "50%", originY: "50%" }}
               />
               <motion.line 
                 x1="4" y1="12" x2="20" y2="12" 
+                initial={false}
                 animate={mobileMenuOpen ? { opacity: 0, x: -10 } : { opacity: 1, x: 0 }} 
-                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }} 
+                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] as any }} 
               />
               <motion.line 
                 x1="4" y1="18" x2="20" y2="18" 
                 animate={mobileMenuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }} 
-                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }} 
+                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] as any }} 
                 style={{ originX: "50%", originY: "50%" }}
               />
             </svg>
@@ -210,7 +211,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] as any }}
             className="fixed inset-x-0 top-16 bottom-0 bg-[#050507] z-40 px-6 flex flex-col overflow-y-auto lg:hidden border-t border-white/[0.06]"
           >
             <motion.div 
@@ -232,7 +233,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               {navLinks.map((link) => {
                 const isActive = activePage === link.id;
                 return (
-                  <motion.div key={link.id} variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } } }}>
+                  <motion.div key={link.id} variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] as any } } }}>
                     <Link
                       href={link.id === 'home' ? '/' : `/${link.id}`}
                       onClick={handleNavClick}
@@ -257,7 +258,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.5, delay: 0.4, ease: [0.22, 1, 0.36, 1] as any }}
               className="mt-auto pt-8 pb-12 sm:pb-16 space-y-6 shrink-0"
             >
               <a

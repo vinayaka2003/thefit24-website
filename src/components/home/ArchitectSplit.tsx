@@ -16,7 +16,7 @@ export const ArchitectSplit: React.FC<ArchitectSplitProps> = ({ onSeeBlueprint }
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as any }}
             className="lg:col-span-6 relative"
           >
             <div className="overflow-hidden rounded-lg border border-[#22222a] group">
@@ -34,7 +34,7 @@ export const ArchitectSplit: React.FC<ArchitectSplitProps> = ({ onSeeBlueprint }
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] as any }}
             className="lg:col-span-6 flex flex-col items-start justify-center pl-0 lg:pl-10"
           >
               <span className="text-xs sm:text-sm font-sans font-bold tracking-[0.25em] text-transparent bg-clip-text bg-gradient-to-r from-[#FF8C00] via-[#FF5500] to-[#FF3300] uppercase mb-4 block drop-shadow-[0_0_12px_rgba(255,85,0,0.4)]">

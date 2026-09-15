@@ -24,7 +24,7 @@ export const FacilitiesView: React.FC<FacilitiesViewProps> = ({ onOpenConsult })
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as any } }
   };
 
   return (
@@ -70,7 +70,7 @@ export const FacilitiesView: React.FC<FacilitiesViewProps> = ({ onOpenConsult })
                 initial={{ opacity: 0, x: idx % 2 === 1 ? 30 : -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] as any }}
                 className="w-full lg:w-3/5 aspect-[4/3] relative rounded-sm overflow-hidden"
               >
                 <div className="absolute inset-0 bg-black/20 z-10 mix-blend-overlay" />
@@ -93,7 +93,7 @@ export const FacilitiesView: React.FC<FacilitiesViewProps> = ({ onOpenConsult })
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] as any }}
                 className="w-full lg:w-2/5 space-y-12"
               >
                 <div>
@@ -152,7 +152,7 @@ export const FacilitiesView: React.FC<FacilitiesViewProps> = ({ onOpenConsult })
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as any }}
           className="flex flex-col items-center text-center pb-12"
         >
           <h3 className="text-2xl sm:text-4xl font-medium tracking-tight mb-8">

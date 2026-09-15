@@ -41,7 +41,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenConsult, onNavigate 
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as any } }
   };
 
   return (
@@ -79,7 +79,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenConsult, onNavigate 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] as any }}
             className="relative aspect-[4/5] w-full overflow-hidden rounded-sm"
           >
             <div className="absolute inset-0 bg-black/20 z-10 mix-blend-overlay" />
@@ -94,7 +94,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenConsult, onNavigate 
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] as any }}
             className="flex flex-col space-y-8"
           >
             <h2 className="text-2xl sm:text-3xl font-medium tracking-tight leading-snug">
@@ -112,7 +112,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenConsult, onNavigate 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as any }}
         >
           <div className="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 mb-12">
             CORE PRINCIPLES
@@ -146,7 +146,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenConsult, onNavigate 
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as any }}
                       className="overflow-hidden"
                     >
                       <p className="pb-8 pl-14 sm:pl-24 text-sm text-neutral-400 font-light max-w-2xl leading-relaxed">
@@ -165,7 +165,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenConsult, onNavigate 
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as any }}
           className="flex flex-col items-center text-center py-24 border-t border-white/[0.06]"
         >
           <h3 className="text-2xl sm:text-4xl font-medium tracking-tight mb-8">

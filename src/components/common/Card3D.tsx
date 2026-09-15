@@ -89,7 +89,7 @@ export const Card3D: React.FC<Card3DProps> = ({
           transformStyle: 'preserve-3d',
         }}
         whileHover={{ scale: scaleOnHover }}
-        transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] as any }}
         className="relative w-full h-full will-change-transform flex flex-col"
       >
         {/* Dynamic metallic sheen reflection */}

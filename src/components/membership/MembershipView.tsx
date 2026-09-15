@@ -22,7 +22,7 @@ export const MembershipView: React.FC<MembershipViewProps> = ({ onSelectPlan, on
 
   const itemVariants = {
     hidden: { opacity: 0, y: 40, filter: 'blur(10px)' },
-    visible: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
+    visible: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as any } }
   };
 
   const comparisonRows = [
@@ -107,7 +107,7 @@ export const MembershipView: React.FC<MembershipViewProps> = ({ onSelectPlan, on
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.7, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.7, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] as any }}
                 onMouseEnter={() => setHoveredPlan(plan.id)}
                 onMouseLeave={() => setHoveredPlan(null)}
                 className="relative group h-full flex flex-col"
@@ -187,7 +187,7 @@ export const MembershipView: React.FC<MembershipViewProps> = ({ onSelectPlan, on
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] as any }}
           className="mb-32 overflow-hidden rounded-3xl border border-white/20 bg-[#121218] drop-shadow-2xl"
         >
           <div className="p-8 sm:p-12 border-b border-white/20">
@@ -237,7 +237,7 @@ export const MembershipView: React.FC<MembershipViewProps> = ({ onSelectPlan, on
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] as any }}
           className="max-w-4xl mx-auto mb-32"
         >
           <div className="text-center mb-16">
@@ -262,7 +262,7 @@ export const MembershipView: React.FC<MembershipViewProps> = ({ onSelectPlan, on
                     </span>
                     <motion.div 
                       animate={{ rotate: isOpen ? 180 : 0 }}
-                      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as any }}
                       className={`flex items-center justify-center w-8 h-8 rounded-full border transition-colors duration-300 shrink-0 ${isOpen ? 'border-white text-white' : 'border-white/10 text-neutral-500'}`}
                     >
                       <ChevronDown className="w-4 h-4" />
@@ -272,7 +272,7 @@ export const MembershipView: React.FC<MembershipViewProps> = ({ onSelectPlan, on
                   <motion.div 
                     initial={false}
                     animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
-                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as any }}
                     className="overflow-hidden"
                   >
                     <div className="px-6 sm:px-8 pb-6 sm:pb-8 text-sm text-neutral-400 leading-relaxed font-light border-t border-white/5 pt-6 mt-2">
@@ -290,7 +290,7 @@ export const MembershipView: React.FC<MembershipViewProps> = ({ onSelectPlan, on
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] as any }}
           className="relative rounded-3xl overflow-hidden bg-white text-black p-12 sm:p-20 text-center"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/5 to-transparent pointer-events-none" />

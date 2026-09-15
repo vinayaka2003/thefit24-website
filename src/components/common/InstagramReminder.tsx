@@ -41,7 +41,7 @@ export const InstagramReminder: React.FC = () => {
             initial={{ opacity: 0, scale: 0.95, y: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 10 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] as any }}
             className="relative w-full max-w-[420px] bg-[#0c0c0e] rounded-2xl border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] p-8 flex flex-col items-center text-center"
           >
             {/* Elegant Close Button */}

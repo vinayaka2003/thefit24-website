@@ -23,13 +23,10 @@ export const SmoothScroller = () => {
 
     requestAnimationFrame(raf);
 
-    // Delay scroll reset to wait for AnimatePresence exit animation (400ms)
-    const scrollTimeout = setTimeout(() => {
-      lenis.scrollTo(0, { immediate: true });
-    }, 400);
+    // Reset scroll immediately on route change
+    lenis.scrollTo(0, { immediate: true });
 
     return () => {
-      clearTimeout(scrollTimeout);
       lenis.destroy();
     };
   }, [pathname]);

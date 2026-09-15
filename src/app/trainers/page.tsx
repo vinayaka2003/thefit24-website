@@ -15,6 +15,6 @@ export default function TrainersPage() {
   };
 
   return (
-    <TrainersView onBookTrainer={handleBookTrainer} />
+    <TrainersView />
   );
 }

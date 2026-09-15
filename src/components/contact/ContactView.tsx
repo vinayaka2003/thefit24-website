@@ -48,7 +48,7 @@ Please contact me regarding my enquiry.`;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as any } }
   };
 
   return (
@@ -175,7 +175,7 @@ Please contact me regarding my enquiry.`;
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] as any }}
             className="lg:col-span-7 lg:pl-12 lg:border-l border-white/[0.06]"
           >
             {submitted ? (
