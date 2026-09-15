@@ -23,6 +23,21 @@ export const ContactView: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const whatsappNumber = '919740262746';
+    const message = `FIT24 Website Enquiry
+
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+Subject: ${formData.subject}
+Message: ${formData.message}
+
+Please contact me regarding my enquiry.`;
+
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank', 'noopener,noreferrer');
+
     setSubmitted(true);
   };
 
@@ -143,7 +158,7 @@ export const ContactView: React.FC = () => {
                   <SvglWhatsApp size={16} />
                 </a>
                 <a
-                  href="https://instagram.com/thefit24.in"
+                  href="https://www.instagram.com/thefit24.in/"
                   target="_blank"
                   rel="noreferrer"
                   className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
@@ -174,7 +189,7 @@ export const ContactView: React.FC = () => {
                   Transmission Received
                 </h3>
                 <p className="text-sm text-neutral-400 font-light max-w-md mx-auto mb-12">
-                  Your message has been logged. We will contact you shortly to confirm your request.
+                  Your enquiry is ready on WhatsApp. Please tap Send to complete your enquiry.
                 </p>
                 <Button
                   variant="outline"

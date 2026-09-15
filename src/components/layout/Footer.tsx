@@ -71,7 +71,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsult }) => {
               </a>
 
               <a
-                href="https://instagram.com/thefit24.in"
+                href="https://www.instagram.com/thefit24.in/"
                 target="_blank"
                 rel="noreferrer"
                 className="w-8 h-8 rounded-lg bg-[#14141c] hover:bg-[#1f1f2a] border border-white/[0.08] hover:border-pink-500/40 flex items-center justify-center transition-colors"

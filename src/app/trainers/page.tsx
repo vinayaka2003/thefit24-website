@@ -6,7 +6,7 @@ import { Trainer } from '../../types';
 const TrainersView = dynamic(() => import('../../components/trainers/TrainersView').then(mod => mod.TrainersView), { ssr: false });
 
 export default function TrainersPage() {
-  const whatsappNumber = '918055534824';
+  const whatsappNumber = '919740262746';
 
   const handleBookTrainer = (trainer: Trainer) => {
     const msg = `Hi TheFit24, I would like to book a coaching session with ${trainer.name}.`;

@@ -11,7 +11,7 @@ export const socialLinks: SocialLink[] = [
   {
     platform: 'WhatsApp',
     handle: '+91 80555 34824',
-    url: 'https://wa.me/918055534824?text=Hi%20TheFit24%2C%20I%20would%20like%20to%20inquire%20about%20passes%20and%20membership',
+    url: 'https://wa.me/919740262746?text=Hi%20TheFit24%2C%20I%20would%20like%20to%20inquire%20about%20passes%20and%20membership',
     icon: 'WhatsApp',
     svglRoute: 'https://svgl.app/library/whatsapp-icon.svg',
     followers: '24/7 Live Desk',
@@ -19,7 +19,7 @@ export const socialLinks: SocialLink[] = [
   {
     platform: 'Instagram',
     handle: '@TheFit24Official',
-    url: 'https://instagram.com',
+    url: 'https://www.instagram.com/thefit24.in/',
     icon: 'Instagram',
     svglRoute: 'https://svgl.app/library/instagram-icon.svg',
     followers: '48.5K Lifters',

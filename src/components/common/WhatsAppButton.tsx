@@ -4,7 +4,7 @@ import { ArrowUp } from 'lucide-react';
 
 export const WhatsAppButton: React.FC = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
-  const whatsappNumber = '918055534824';
+  const whatsappNumber = '919740262746';
   const defaultMessage = 'Hi TheFit24, I would like to inquire about membership and facility access.';
   
   useEffect(() => {

@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 const MembershipView = dynamic(() => import('../../components/membership/MembershipView').then(mod => mod.MembershipView), { ssr: false });
 
 export default function MembershipPage() {
-  const whatsappNumber = '918055534824';
+  const whatsappNumber = '919740262746';
 
   const handleOpenConsult = (type: string = 'membership-signup') => {
     let msg = 'Hi TheFit24, I am interested in joining and would like to sign up for a membership.';

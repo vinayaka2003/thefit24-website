@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 const FacilitiesView = dynamic(() => import('../../components/facilities/FacilitiesView').then(mod => mod.FacilitiesView), { ssr: false });
 
 export default function FacilitiesPage() {
-  const whatsappNumber = '918055534824';
+  const whatsappNumber = '919740262746';
 
   const handleOpenConsult = (type: string = 'facility-tour') => {
     let msg = 'Hi TheFit24, I would like to book a free session.';

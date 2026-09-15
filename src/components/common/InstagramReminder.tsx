@@ -8,7 +8,6 @@ export const InstagramReminder: React.FC = () => {
   useEffect(() => {
     // 2. Wait 2 seconds for testing (instead of 10s)
     const timer = setTimeout(() => {
-      console.log('Showing Instagram Reminder...');
       setIsVisible(true);
     }, 2000);
 
@@ -21,7 +20,7 @@ export const InstagramReminder: React.FC = () => {
 
   const handleFollow = () => {
     setIsVisible(false);
-    window.open('https://instagram.com/thefit24', '_blank', 'noopener,noreferrer');
+    window.open('https://www.instagram.com/thefit24.in/', '_blank', 'noopener,noreferrer');
   };
 
   return (

@@ -8,7 +8,7 @@ const AboutView = dynamic(() => import('../../components/about/AboutView').then(
 
 export default function AboutPage() {
   const router = useRouter();
-  const whatsappNumber = '918055534824';
+  const whatsappNumber = '919740262746';
 
   const handleOpenConsult = (type: string = 'consult') => {
     let msg = 'Hi TheFit24, I would like to inquire about membership and facility access.';
