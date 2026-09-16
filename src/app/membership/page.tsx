@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 
-const MembershipView = dynamic(() => import('../../components/membership/MembershipView').then(mod => mod.MembershipView), { ssr: false });
+const MembershipView = dynamic(() => import('../../components/membership/MembershipView').then(mod => mod.MembershipView));
 
 export default function MembershipPage() {
   const whatsappNumber = '919740262746';

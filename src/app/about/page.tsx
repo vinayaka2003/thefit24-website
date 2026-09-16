@@ -4,7 +4,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 
-const AboutView = dynamic(() => import('../../components/about/AboutView').then(mod => mod.AboutView), { ssr: false });
+const AboutView = dynamic(() => import('../../components/about/AboutView').then(mod => mod.AboutView));
 
 export default function AboutPage() {
   const router = useRouter();

@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 
-const FacilitiesView = dynamic(() => import('../../components/facilities/FacilitiesView').then(mod => mod.FacilitiesView), { ssr: false });
+const FacilitiesView = dynamic(() => import('../../components/facilities/FacilitiesView').then(mod => mod.FacilitiesView));
 
 export default function FacilitiesPage() {
   const whatsappNumber = '919740262746';

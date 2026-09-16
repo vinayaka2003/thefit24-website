@@ -1,9 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
 import { usePathname } from 'next/navigation';
 
 export const SmoothScroller = () => {
   const pathname = usePathname();
+  const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -15,20 +16,24 @@ export const SmoothScroller = () => {
       wheelMultiplier: 1,
       touchMultiplier: 2,
     });
+    lenisRef.current = lenis;
 
     function raf(time: number) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      frameId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
-
-    // Reset scroll immediately on route change
-    lenis.scrollTo(0, { immediate: true });
+    let frameId = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(frameId);
+      lenisRef.current = null;
       lenis.destroy();
     };
+  }, []);
+
+  useEffect(() => {
+    lenisRef.current?.scrollTo(0, { immediate: true });
   }, [pathname]);
 
   return null;

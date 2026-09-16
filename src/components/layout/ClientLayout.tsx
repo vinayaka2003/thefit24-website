@@ -27,13 +27,13 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
       <SmoothScroller />
       <Navbar onOpenConsult={() => handleOpenConsult('consult')} />
       
-      <AnimatePresence initial={false}>
+      <AnimatePresence initial={false} mode="wait">
         <motion.main
           key={pathname}
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] as any }}
-          className="flex-1 relative"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.25, ease: 'easeOut' }}
+          className="flex-1 relative will-change-[opacity]"
         >
           {children}
         </motion.main>

@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 import { Trainer } from '../../types';
 
-const TrainersView = dynamic(() => import('../../components/trainers/TrainersView').then(mod => mod.TrainersView), { ssr: false });
+const TrainersView = dynamic(() => import('../../components/trainers/TrainersView').then(mod => mod.TrainersView));
 
 export default function TrainersPage() {
   const whatsappNumber = '919740262746';
