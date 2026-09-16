@@ -27,9 +27,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsult }) => {
 
   return (
     <footer className="bg-[#09090c] border-t border-white/[0.06] text-neutral-400 font-sans">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6">
         {/* Main Grid */}
-        <div className="flex flex-col md:grid md:grid-cols-12 gap-12 lg:gap-16 pb-12 border-b border-white/[0.06]">
+        <div className="flex flex-col md:grid md:grid-cols-12 gap-6 md:gap-8 lg:gap-10 pb-4 border-b border-white/[0.06]">
           {/* Brand & Address (5 cols) */}
           <div className="md:col-span-5 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
             <div className="flex items-center gap-3">
@@ -164,8 +164,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsult }) => {
         </div>
 
         {/* Minimal Bottom Bar */}
-        <div className="pt-10 pb-4 flex items-center justify-center text-[10px] font-mono tracking-widest uppercase text-neutral-600">
-          <p>© {new Date().getFullYear()} TheFit24. All rights reserved.</p>
+        <div className="pt-3 pb-1 flex items-center justify-center">
+          <div className="flex items-center justify-center gap-2 sm:gap-3 text-[7px] sm:text-[8px] md:text-[9px] font-mono uppercase tracking-[0.28em] text-neutral-500">
+            <span className="hidden sm:inline-block h-px w-8 bg-white/[0.08]" />
+            <p>© {new Date().getFullYear()} TheFit24</p>
+            <span className="hidden sm:inline text-neutral-700">•</span>
+            <p className="hidden sm:inline">All rights reserved</p>
+            <span className="hidden sm:inline-block h-px w-8 bg-white/[0.08]" />
+          </div>
         </div>
       </div>
     </footer>
