@@ -1,4 +1,7 @@
 "use client";
-import dynamic from 'next/dynamic';
+import type { ReactNode } from 'react';
+import { ClientLayout } from './ClientLayout';
 
-export const DynamicClientLayout = dynamic(() => import('./ClientLayout').then(mod => mod.ClientLayout), { ssr: false });
+export function DynamicClientLayout({ children }: { children: ReactNode }) {
+	return <ClientLayout>{children}</ClientLayout>;
+}

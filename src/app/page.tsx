@@ -6,13 +6,13 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'motion/react';
 import { Button } from '../components/common/Button';
 
-const Hero = dynamic(() => import('../components/home/Hero').then(mod => mod.Hero), { ssr: false });
-const ArchitectSplit = dynamic(() => import('../components/home/ArchitectSplit').then(mod => mod.ArchitectSplit), { ssr: false });
-const EquipmentStrip = dynamic(() => import('../components/home/EquipmentStrip').then(mod => mod.EquipmentStrip), { ssr: false });
-const MembershipPreview = dynamic(() => import('../components/home/MembershipPreview').then(mod => mod.MembershipPreview), { ssr: false });
-const ReviewsSection = dynamic(() => import('../components/home/ReviewsSection').then(mod => mod.ReviewsSection), { ssr: false });
-const GoogleReviewsSection = dynamic(() => import('../components/home/GoogleReviewsSection').then(mod => mod.GoogleReviewsSection), { ssr: false });
-const GymLocationSection = dynamic(() => import('../components/home/GymLocationSection').then(mod => mod.GymLocationSection), { ssr: false });
+const Hero = dynamic(() => import('../components/home/Hero').then(mod => mod.Hero));
+const ArchitectSplit = dynamic(() => import('../components/home/ArchitectSplit').then(mod => mod.ArchitectSplit));
+const EquipmentStrip = dynamic(() => import('../components/home/EquipmentStrip').then(mod => mod.EquipmentStrip));
+const MembershipPreview = dynamic(() => import('../components/home/MembershipPreview').then(mod => mod.MembershipPreview));
+const ReviewsSection = dynamic(() => import('../components/home/ReviewsSection').then(mod => mod.ReviewsSection));
+const GoogleReviewsSection = dynamic(() => import('../components/home/GoogleReviewsSection').then(mod => mod.GoogleReviewsSection));
+const GymLocationSection = dynamic(() => import('../components/home/GymLocationSection').then(mod => mod.GymLocationSection));
 
 export default function HomeView() {
   const router = useRouter();
