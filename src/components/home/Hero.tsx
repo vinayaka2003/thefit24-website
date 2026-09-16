@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'motion/react';
 import { Button } from '../common/Button';
 import { AnimatedCounter } from '../common/AnimatedCounter';
@@ -11,27 +11,6 @@ interface HeroProps {
 
 const LIFTING_VIDEOS = [
   {
-    id: 'deadlift',
-    label: 'Deadlift',
-    desc: 'Heavy Barbell Deadlift',
-    src: '/videos/deadlift.mp4',
-    poster: '/videos/poster-deadlift.jpg',
-  },
-  {
-    id: 'dumbbell',
-    label: 'Dumbbells',
-    desc: 'Dumbbell Press',
-    src: '/videos/dumbbell.mp4',
-    poster: '/videos/poster-dumbbell.jpg',
-  },
-  {
-    id: 'barbell',
-    label: 'Barbell',
-    desc: 'Barbell Curls & Lifts',
-    src: '/videos/barbell.mp4',
-    poster: '/videos/poster-barbell.jpg',
-  },
-  {
     id: 'reel',
     label: 'Full Reel',
     desc: 'Deadlift, Dumbbell & Barbell Montage',
@@ -43,9 +22,8 @@ const LIFTING_VIDEOS = [
 export const Hero: React.FC<HeroProps> = ({ onStartBuild, onExploreFacilities }) => {
   const containerRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const activeVideoId = 'reel'; // Only use the full reel for a clean look
 
-  const currentVideo = LIFTING_VIDEOS.find((v) => v.id === activeVideoId) || LIFTING_VIDEOS[0];
+  const currentVideo = LIFTING_VIDEOS[0];
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -69,7 +47,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartBuild, onExploreFacilities })
       videoRef.current.load();
       videoRef.current.play().catch(() => {});
     }
-  }, [activeVideoId]);
+  }, [currentVideo.id]);
 
   return (
     <section

@@ -13,11 +13,11 @@ export const gymData: GymInfo = {
     landmark: 'Near Reva University, BSF Circle',
   },
   coordinates: {
-    lat: 13.1264964,
-    lng: 77.6308447,
-    formatted: '13.1264964° N, 77.6308447° E',
-    mapsSearchUrl: 'https://www.google.com/maps/search/?api=1&query=TheFit24&query_place_id=ChIJtQLn_rcZrjsRDXGx61UXQGs',
-    directionsUrl: 'https://www.google.com/maps?q=13.1264964,77.6308447',
+    lat: 13.122466670725972,
+    lng: 77.63064472502387,
+    formatted: '13.1224666° N, 77.6306447° E',
+    mapsSearchUrl: 'https://www.google.com/maps/search/?api=1&query=13.122466670725972,77.63064472502387',
+    directionsUrl: 'https://www.google.com/maps?q=13.122466670725972,77.63064472502387',
   },
   contact: {
     phone: '+91 97402 62746',

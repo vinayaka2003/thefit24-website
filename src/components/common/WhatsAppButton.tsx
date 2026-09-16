@@ -35,7 +35,7 @@ export const WhatsAppButton: React.FC = () => {
       {/* Back to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`w-10 h-10 rounded-full bg-[#111116] border border-white/[0.08] text-neutral-400 hover:text-white flex items-center justify-center transition-all duration-500 hover:bg-[#1f1f28] hover:border-white/20 shadow-lg cursor-pointer ${
+        className={`w-10 h-10 rounded-full bg-neutral-800 border border-neutral-600 text-white hover:bg-white hover:text-black flex items-center justify-center transition-all duration-500 shadow-lg cursor-pointer ${
           showTopBtn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
         }`}
         aria-label="Back to top"
@@ -44,15 +44,21 @@ export const WhatsAppButton: React.FC = () => {
         <ArrowUp className="w-4 h-4" />
       </button>
 
-      {/* Ultra-Minimalist Direct WhatsApp Link */}
+      {/* Authentic WhatsApp Button with Expanding Hover */}
       <button
         onClick={handleLaunch}
-        className="w-14 h-14 rounded-full bg-white hover:bg-neutral-200 text-black flex items-center justify-center transition-all duration-300 cursor-pointer active:scale-90 shadow-[0_0_30px_rgba(255,255,255,0.15)] group relative"
+        className="h-14 rounded-full bg-[#25D366] hover:bg-[#22bf5b] text-white flex items-center transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] cursor-pointer shadow-[0_8px_24px_rgba(37,211,102,0.4)] group relative overflow-hidden w-14 hover:w-40"
         aria-label="Contact via WhatsApp"
         title="Contact via WhatsApp"
       >
-        <div className="absolute inset-0 rounded-full border border-white/20 scale-[1.15] opacity-0 group-hover:opacity-100 group-hover:scale-[1.2] transition-all duration-500 pointer-events-none" />
-        <SvglWhatsApp size={24} className="transition-transform duration-300 group-hover:scale-110" />
+        <div className="absolute inset-0 rounded-full border border-white/40 scale-[1.15] opacity-0 group-hover:opacity-100 group-hover:scale-[1.3] transition-all duration-700 pointer-events-none" />
+        
+        <div className="flex items-center justify-start w-full pl-3.5 gap-3 whitespace-nowrap">
+          <SvglWhatsApp size={28} color="white" className="shrink-0 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 drop-shadow-md" />
+          <span className="font-sans font-semibold text-sm opacity-0 translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 tracking-wide">
+            Chat with us
+          </span>
+        </div>
       </button>
 
     </div>

@@ -1,17 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Instagram } from 'lucide-react';
+import { X } from 'lucide-react';
+import { SvglInstagramSolid } from './SvglIcons';
 
 export const InstagramReminder: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // 2. Wait 2 seconds for testing (instead of 10s)
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 2000);
+    // Check if the popup has already been shown in this tab session
+    const hasSeenPopup = sessionStorage.getItem('instagramReminderShown');
+    
+    if (!hasSeenPopup) {
+      // PRODUCTION MODE: Show popup after 12 seconds
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+        // Mark as seen for this session so it won't show on refresh
+        sessionStorage.setItem('instagramReminderShown', 'true');
+      }, 12000);
 
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const handleDismiss = () => {
@@ -24,57 +32,76 @@ export const InstagramReminder: React.FC = () => {
   };
 
   return (
-    // 12. Do NOT repeatedly animate or reappear after dismissal (AnimatePresence handles the exit, and state ensures it stays gone)
     <AnimatePresence>
       {isVisible && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+            transition={{ duration: 0.5 }}
+            className="absolute inset-0 bg-[#050507]/80 backdrop-blur-xl"
             onClick={handleDismiss}
           />
           
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 10 }}
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 10 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] as any }}
-            className="relative w-full max-w-[420px] bg-[#0c0c0e] rounded-2xl border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] p-8 flex flex-col items-center text-center"
+            transition={{ type: "spring", stiffness: 350, damping: 30 }}
+            className="relative w-full max-w-[360px] overflow-hidden rounded-3xl bg-[#0a0a0c]/90 backdrop-blur-2xl border border-white/10 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] flex flex-col items-center text-center p-8"
           >
-            {/* Elegant Close Button */}
+            {/* Background Atmosphere */}
+            <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-white/[0.03] to-transparent pointer-events-none" />
+            <div className="absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br from-[#FF8C00] to-[#FF3300] rounded-full blur-[80px] opacity-[0.15] pointer-events-none" />
+
+            {/* Aesthetic Frosted Close Button */}
             <button
               onClick={handleDismiss}
-              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white rounded-full transition-colors focus:outline-none"
+              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-white/5 hover:bg-white/15 border border-white/5 text-white/60 hover:text-white rounded-full transition-all duration-300 focus:outline-none shadow-sm z-10"
               aria-label="Close"
             >
-              <X size={16} />
+              <X size={14} strokeWidth={2.5} />
             </button>
             
-            {/* Logo container with subtle premium glow */}
-            <div className="mb-6 flex flex-col items-center justify-center">
-              <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#1c1c24] flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.05)] bg-black">
-                 <img src="/logo.jpg" alt="TheFit24 Logo" className="w-full h-full object-cover" />
+            {/* iOS-Style Notification Avatar */}
+            <div className="relative mb-6 mt-4 z-10">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF8C00] to-[#FF3300] blur-[25px] opacity-30 rounded-full" />
+              
+              {/* Gym Logo */}
+              <div className="relative w-20 h-20 rounded-full overflow-hidden border border-white/10 shadow-2xl bg-black">
+                <img src="/logo.jpg" alt="TheFit24" className="w-full h-full object-cover" />
+              </div>
+              
+              {/* Instagram Badge */}
+              <div className="absolute -bottom-1 -right-1 w-8 h-8 flex items-center justify-center bg-gradient-to-r from-[#FF8C00] to-[#FF3300] rounded-full border-[3px] border-[#0a0a0c] shadow-lg">
+                <SvglInstagramSolid size={14} color="white" />
               </div>
             </div>
             
-            <h2 className="text-3xl font-bold text-white mb-3 tracking-tight">
-              Connect With Us
-            </h2>
+            {/* Typography */}
+            <h3 className="text-xl font-bold text-white tracking-tight mb-2 z-10 relative">
+              Welcome
+            </h3>
             
-            <p className="text-sm text-neutral-400 leading-relaxed mb-8 px-2">
-              Follow our journey on Instagram for daily motivation, workout tips, and exclusive facility updates.
+            <p className="text-sm text-neutral-400 leading-relaxed mb-8 z-10 relative">
+              Follow us on Instagram to get updates.
             </p>
             
-            {/* Professional solid button */}
+            {/* Pure Clean Button (No Arrow) */}
             <button
               onClick={handleFollow}
-              className="w-full flex items-center justify-center gap-3 rounded-xl bg-white hover:bg-neutral-200 text-black px-6 py-3.5 transition-all duration-300 shadow-lg focus:outline-none"
+              className="w-full rounded-2xl bg-gradient-to-r from-[#FF8C00] via-[#FF5500] to-[#FF3300] text-white px-6 py-4 transition-all duration-300 font-bold text-[15px] tracking-wide shadow-[0_8px_24px_rgba(255,85,0,0.25)] hover:shadow-[0_8px_32px_rgba(255,85,0,0.4)] focus:outline-none hover:scale-[1.02] active:scale-[0.98] z-10 relative"
             >
-              <Instagram size={20} />
-              <span className="font-bold text-sm tracking-wide">FOLLOW @THEFIT24</span>
+              Follow
+            </button>
+            
+            {/* Subtle Dismiss Text */}
+            <button
+              onClick={handleDismiss}
+              className="mt-6 text-xs text-neutral-500 hover:text-white transition-colors font-medium tracking-wide focus:outline-none z-10 relative"
+            >
+              Maybe later
             </button>
           </motion.div>
         </div>
